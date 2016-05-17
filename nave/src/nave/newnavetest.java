@@ -15,7 +15,7 @@ public class newnavetest {
 		System.out.println("");
 		r2=Municion.elegirmunicion();
 		
-		nave n1=new nave();
+		newnave n1=new newnave();
 		System.out.println("");
 		System.out.println("Nave: "+r1);
 		System.out.println(n1.toString());

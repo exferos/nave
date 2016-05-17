@@ -34,7 +34,7 @@ public class Municion {
 				System.out.println("mala eleccion");
 				break;
 		}
-		return(eleccion_municion[num]);
+		return(eleccion_municion[num-1]);
 	}
 	
 }

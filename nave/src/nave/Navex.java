@@ -34,7 +34,7 @@ public class Navex{
 				System.out.println("mala eleccion");
 				break;
 		}
-		return(eleccion_nave[num]);
+		return(eleccion_nave[num-1]);
 	}
 	
 }
