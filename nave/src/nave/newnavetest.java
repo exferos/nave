@@ -20,6 +20,7 @@ public class newnavetest {
 		
 		do{
 			
+			
 			System.out.println("!!!RONDA "+ ronda + "!!!!");
 			
 			Combate combate = new Combate(n1, enem);
@@ -37,10 +38,13 @@ public class newnavetest {
 			System.out.println("");
 			System.out.println(combate.vidaPerdidaEnem());
 			System.out.println(combate.vidaPerdidaNave());
-			newnave.pausa();
+//			newnave.pausa();
+			
+			
 			
 			if (enem.getVida()<=0){
 				enem= new Enemigos();
+				if(ronda%2==0||ronda%3==0){Mejoras.mejoraEnemigo(ronda, enem); Mejoras.mejoraNave(ronda, n1);}
 				ronda++;
 			}
 			

@@ -35,6 +35,7 @@ public class newnave {
 	public String toString(){
 		return (vida+" "+defensa+" "+velocidad);
 	}
+	
 	static void pausa(){
 		try {
 			Thread.sleep(2000);
@@ -52,4 +53,9 @@ public class newnave {
 	public String getTipo() { return tipo; }
 	
 	public String getMunicion() { return municion; }
+
+	public void setDefensa(int defensa) {this.defensa = defensa;}
+
+
+
 }

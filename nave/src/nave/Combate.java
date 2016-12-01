@@ -1,15 +1,15 @@
 package nave;
 
 public class Combate {
-	private newnave nave;
-	private Enemigos enemigo;
+	private static newnave nave;
+	private static Enemigos enemigo;
 	
 	Combate(newnave nave, Enemigos enem) {
 		this.nave = nave;
 		this.enemigo = enem;	
 	}
 	
-	int damagerealizado(){
+	static int damagerealizado(){
 		int dmgrealizado = 0;
 		if(nave.getMunicion().equals("congelante") && nave.getTipo().equals("goliath")) {
 			int damagerealizado=(int) (Math.random()*(25000-10000)+1)+10000;
@@ -31,7 +31,7 @@ public class Combate {
 		return dmgrealizado;
 	}
 	
-	int damageEnemigorealizado(){
+	static int damageEnemigorealizado(){
 		int dmgrealizadoEnemi=0;
 		if(enemigo.getTipo().equals("gusano") && nave.getMunicion().equals("corrosiva")){
 			int damagrealizadoEnemi=(int)(Math.random()*(10000-2000)+2000);
@@ -53,12 +53,12 @@ public class Combate {
 		return dmgrealizadoEnemi;
 	}
 	
-	String vidaPerdidaNave(){
+	static String vidaPerdidaNave(){
 		nave.setVida(nave.getVida()-damageEnemigorealizado());
 		return ("daño del enemigo: " + (damageEnemigorealizado()));
 	}
 	
-	String vidaPerdidaEnem(){
+	static String vidaPerdidaEnem(){
 		enemigo.setVida(enemigo.getVida()-damagerealizado());
 		return("daño de la nave: "+ (damagerealizado()));
 	}
